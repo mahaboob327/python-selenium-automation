@@ -37,7 +37,6 @@ driver.find_element(By.XPATH, "//a[@href='/gp/help/customer/account-issues/ref=u
 # Don't see Forgot your password link<<<---
 # Don't see Other issues with Sign-In link<<<--
 
-
 #Create a free business
 driver.find_element(By.XPATH, "//a[@id='ab-registration-ingress-link']")
 
