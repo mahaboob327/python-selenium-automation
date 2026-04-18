@@ -39,4 +39,3 @@ driver.find_element(By.XPATH, "//a[@href='/gp/help/customer/account-issues/ref=u
 
 #Create a free business
 driver.find_element(By.XPATH, "//a[@id='ab-registration-ingress-link']")
-

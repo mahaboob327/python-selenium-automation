@@ -29,5 +29,5 @@ driver.find_element(By.XPATH, "//button[@data-test='accountNav-signIn']").click(
 driver.find_element(By.XPATH, "//h1[contains(text(),'Sign in or create account')]")
 
 sleep(5)
-driver.quit()
+
 
