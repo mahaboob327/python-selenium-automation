@@ -15,7 +15,8 @@ def open_target(context):
 
 @then('Verify user can click through colors')
 def click_and_verify_colors(context):
-    expected_colors = ['Red', 'Black', 'White']  # Update these based on actual colors for this blouse
+    # Updated to match actual colors on the product page
+    expected_colors = ['Blue', 'Brown', 'Red']
     actual_colors = []
 
     colors = context.driver.find_elements(*COLOR_OPTIONS)
