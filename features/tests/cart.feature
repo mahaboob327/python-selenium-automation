@@ -14,3 +14,4 @@ Feature: Cart test cases
     And Confirm Add to Cart button from side navigation
     And Open cart page
     Then Verify cart has 1 item(s)
+    And Verify correct product is in cart

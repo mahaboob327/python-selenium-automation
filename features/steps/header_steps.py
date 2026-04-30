@@ -10,7 +10,6 @@ SEARCH_BTN = (By.XPATH, "//button[@data-test='@web/Search/SearchButton']")
 @when("Click on the cart icon")
 def click_cart(context,):
     context.driver.find_element(*CART_ICON).click()
-    sleep(5)
 
 
 @when("Search for {search_query}")
@@ -18,4 +17,21 @@ def search_product(context, search_query):
     context.driver.find_element(*SEARCH_FIELD).send_keys(search_query)
     context.driver.find_element(*SEARCH_BTN).click()
     sleep(7)
+    sleep(10)
 
+
+@then("Verify header link container is shown")
+def verify_header_links(context):
+    e = context.driver.find_element(By.CSS_SELECTOR, "[class*='HeaderLinksContainer']")
+    print('\nHeader links container: ')
+    print(e)
+
+    
+@then("Verify {expected_amount} links are shown")
+def verify_header_link_amount(context, expected_amount):  #  expected_amount = "6"
+    expected_amount = int(expected_amount) # expected_amount "6" => 6
+    links = context.driver.find_elements(By.CSS_SELECTOR, "[class*='HeaderLinksContainer'] a")
+    print('\nHeader links: ')
+    print(links)
+    # assert 6 == 6
+    assert len(links) == expected_amount, f'Expected {expected_amount} links but got {len(links)}'
